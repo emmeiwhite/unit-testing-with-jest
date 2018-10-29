@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts":{
-    "test":"jest"
+  "scripts": {
+    "test": "jest"
   },
   "devDependencies": {
+    "deep-freeze": "^0.0.1",
     "jest": "^23.6.0"
   }
 }
