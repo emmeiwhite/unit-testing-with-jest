@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch",
+    "coverage":"jest --coverage"
   },
   "devDependencies": {
     "babel-jest": "^23.6.0",
@@ -12,5 +13,10 @@
     "babel-preset-stage-2": "^6.24.1",
     "deep-freeze": "^0.0.1",
     "jest": "^23.6.0"
+  },
+  "jest":{
+    "collectCoverageFrom":[
+      "*.js"
+    ]
   }
 }

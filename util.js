@@ -33,8 +33,20 @@ const updateItemFromList = (colors,index,element)=>{
 // 4. Adding property value (newItem) to an object / Immutabily
 
 var addNewPropertyToAnObject = function(person,nameValue){
-    person['name'] = nameValue;
-    return person;
+   // 1. Directly adding property on the object - Mutable way
+   /*
+   person['name'] = nameValue;
+   return person;
+   */
+
+    // 2. Using ES5 Object.assign
+    /*
+    return Object.assign({},person,{name:nameValue})
+    */
+
+    // 3. Using ES6 spread operator
+
+    return {...person,name:nameValue}
 }
 
 

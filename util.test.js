@@ -1,5 +1,6 @@
 // let util =require('./util.js'); // All util file comes here 
 import * as util from './util.js';
+// import demofile from './demofile'; 
 
 import deepFreeze from 'deep-freeze';
 
@@ -72,6 +73,8 @@ describe("OBJECT TEST CASES",()=>{
     test('Adding object property value',()=>{
         
         const person = {age:27}
+
+        deepFreeze(person);
 
         const result = util.addNewPropertyToAnObject(person,'Imran');
 
