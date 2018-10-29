@@ -19,28 +19,45 @@ test('ADDING TWO NUMBERS',()=>{
 // 1.Adding item to a list test case
 
 test('ADDING ITEM TO A LIST IMMUTABLY',()=>{
-    var list = ['redux','react-router'];
+    let list = ['redux','react-router'];
     
     deepFreeze(list)// Object is freeded now  AND cannot be immutated  directly  anymore                                                                                       
     // result will come from our file and then we'll test it with our expected result using jest
-    var result = util.addItemToList(list,'react-modal');
+    let result = util.addItemToList(list,'react-modal');
 
-    var expected = ['redux','react-router','react-modal'];
+    let expected = ['redux','react-router','react-modal'];
 
     expect(result).toEqual(expected);
 })
 
 
-// 1.Adding item to a list test case
+// 2.Removing item from a list
 
 test('REMOVING ITEM FROM A LIST IMMUTABLY',()=>{
-    var list = ['redux','react-router'];
+    let list = ['redux','react-router'];
     
     deepFreeze(list)// Object is freeded now  AND cannot be immutated  directly  anymore                                                                                       
     // result will come from our file and then we'll test it with our expected result using jest
-    var result = util.removeItemFromList(list,1);
+    let result = util.removeItemFromList(list,1);
 
-    var expected = ['redux'];
+    let expected = ['redux'];
 
     expect(result).toEqual(expected);
 })
+
+// 3.Updating item in a list
+
+test("UPDATING ITEM IN THE A LIST",()=>{
+    let colors = ['blue','green','white','orange'];
+
+    deepFreeze(colors);
+    
+    let result = util.updateItemFromList(colors,2,'red');
+
+    let expected = ['blue','green','red','orange'];
+
+    expect(result).toEqual(expected);
+})
+
+// 4.
+

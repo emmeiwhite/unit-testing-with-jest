@@ -15,12 +15,26 @@ const removeItemFromList = (list,index)=>{
     })
 }
 
-const updateItemFromList = (list,index,listItem)=>{
-    
+// 3. Update the element in an array
+const updateItemFromList = (colors,index,element)=>{
+    // Mutably
+    // colors[index] = element;
+    // return colors;
+
+    // To Immutabily do the stuff, we will need to copy the list items first, then update the copied array
+
+    const newColors = colors.slice(); // slice method copies the array
+
+    newColors[index] = element;
+
+    return newColors;
 }
+
+// 4. 
 
 module.exports = {
     sum,
     addItemToList,
-    removeItemFromList
+    removeItemFromList,
+    updateItemFromList
 }
