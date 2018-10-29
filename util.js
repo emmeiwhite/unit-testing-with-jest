@@ -2,24 +2,25 @@
 const sum = (num1,num2)=>{
     return num1+num2;
 }
-// CRUD operations being tested
+
 // 1. Adding Item to a list
 const addItemToList = (list,listItem)=>{
-    // a) In a mutable way we are adding an item to a list
-    list.push(listItem);
-    return list;
-    // return list.concat(listItem);
+    return list.concat(listItem);
 }
 
+// 2. Removing Item from the list, Both Mutably and Immutabily
 const removeItemFromList = (list,index)=>{
-    // return list.splice(index,1)
+    return list.filter((listItem,i)=>{
+        return i !== index;
+    })
 }
 
 const updateItemFromList = (list,index,listItem)=>{
-    return list.splice(index,1)
+    
 }
 
 module.exports = {
     sum,
-    addItemToList
+    addItemToList,
+    removeItemFromList
 }

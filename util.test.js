@@ -29,3 +29,18 @@ test('ADDING ITEM TO A LIST IMMUTABLY',()=>{
 
     expect(result).toEqual(expected);
 })
+
+
+// 1.Adding item to a list test case
+
+test('REMOVING ITEM FROM A LIST IMMUTABLY',()=>{
+    var list = ['redux','react-router'];
+    
+    deepFreeze(list)// Object is freeded now  AND cannot be immutated  directly  anymore                                                                                       
+    // result will come from our file and then we'll test it with our expected result using jest
+    var result = util.removeItemFromList(list,1);
+
+    var expected = ['redux'];
+
+    expect(result).toEqual(expected);
+})
