@@ -30,11 +30,13 @@ const updateItemFromList = (colors,index,element)=>{
     return newColors;
 }
 
-// 4. 
+// 4. Adding property value (newItem) to an object / Immutabily
 
-module.exports = {
-    sum,
-    addItemToList,
-    removeItemFromList,
-    updateItemFromList
+var addNewPropertyToAnObject = function(person,nameValue){
+    person['name'] = nameValue;
+    return person;
 }
+
+
+
+export {sum,addItemToList,removeItemFromList,updateItemFromList,addNewPropertyToAnObject};
